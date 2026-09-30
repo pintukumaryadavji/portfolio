@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pintu Kumar – Full-Stack & AI/ML Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF1F6;--ink:#14213D;--mute:#56627A;--acc:#2F5BFF;--sig:#FFD23F;--card:#fff;--line:#C9D1E0}
+@media(prefers-color-scheme:dark){:root{--bg:#0D1526;--ink:#E8EDF7;--mute:#9AA6BF;--card:#14213D;--line:#2A3958}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 1.05rem/1.6 'Bricolage Grotesque',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:980px;margin:auto;padding:0 1.25rem}
+nav{display:flex;gap:1.5rem;justify-content:flex-end;padding:1.25rem 0}
+nav a{text-decoration:none;font-weight:600}
+nav a:hover{color:var(--acc)}
+.hero{padding:4rem 0 5rem}
+.hero h1{font-size:clamp(2.6rem,9vw,6rem);line-height:1;font-weight:800;letter-spacing:-.03em;max-width:12ch}
+.hero h1 mark{background:var(--sig);color:#14213D;padding:0 .15em;border-radius:.1em}
+.hero p{max-width:52ch;margin:1.5rem 0 2rem;color:var(--mute);font-size:1.2rem}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:.8rem 1.5rem;border-radius:8px;font:600 1rem inherit;border:0;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.1)}
+section{padding:3rem 0;border-top:2px solid var(--line)}
+h2{font-size:2rem;font-weight:800;margin-bottom:1.5rem}
+.skills{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0}
+.skills li,.tags span{background:var(--card);border:1.5px solid var(--line);padding:.3rem .8rem;border-radius:99px;font-size:.9rem}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.proj{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:1.4rem;display:flex;flex-direction:column;gap:.8rem}
+.proj h3{font-size:1.3rem}
+.proj p{color:var(--mute);flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tags span{font-size:.8rem;padding:.1rem .6rem}
+.links{display:flex;gap:1rem;font-weight:600}
+.links a{color:var(--acc)}
+form{display:grid;gap:1rem;max-width:520px}
+label{display:grid;gap:.3rem;font-weight:600}
+input,textarea{font:inherit;padding:.7rem;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+#status{min-height:1.5rem;font-weight:600}
+footer{padding:2rem 0;color:var(--mute);text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main"><a href="#about">About</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></nav>
+
+  <header class="hero">
+    <h1>Hi, I'm <mark>Pintu Kumar</mark></h1>
+    <p>Final-year CSE student building web apps with React, Node.js and MongoDB. 8.6 CGPA, 100+ coding problems solved, and learning Machine Learning.</p>
+    <a class="btn" href="#projects">See my projects</a>
+  </header>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p style="max-width:62ch;margin-bottom:1.25rem">I'm a final-year B.Tech (CSE) student at Gandhi Engineering College, Bhubaneswar, with an 8.6 CGPA. I've built 3 web projects in React, Node.js and JavaScript, and I want to grow as an AI/ML and software developer.</p>
+    <ul class="skills"><li>Python</li><li>Java</li><li>JavaScript</li><li>PHP</li><li>HTML</li><li>CSS</li><li>React.js</li><li>Node.js</li><li>Express.js</li><li>Tailwind CSS</li><li>MySQL</li><li>MongoDB</li><li>REST APIs</li><li>DSA</li><li>Machine Learning (basics)</li><li>Git &amp; GitHub</li><li>Docker</li></ul>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul style="max-width:66ch;padding-left:1.2rem;display:grid;gap:.6rem">
+      <li>Solved 100+ coding problems on LeetCode and Coding Ninjas Code360.</li>
+      <li>Ranked College Topper twice on the Code360 leaderboard.</li>
+      <li>Campus Ambassador for the Entrepreneurship Development Cell, IIT Delhi.</li>
+      <li>Certified in Machine Learning basics (Coding Ninjas), Responsive Web Design (freeCodeCamp), Web Development Fundamentals (IBM SkillsBuild) and Basic Java (Coding Ninjas).</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid" id="projects-grid" aria-live="polite"><p>Loading projects…</p></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact me</h2>
+    <form id="contact-form">
+      <label>Name <input name="name" required maxlength="80" autocomplete="name"></label>
+      <label>Email <input name="email" type="email" required autocomplete="email"></label>
+      <label>Message <textarea name="message" rows="5" required maxlength="2000"></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+      <p id="status" role="status"></p>
+    </form>
+  </section>
+  <footer>© <span id="yr"></span> Pintu Kumar · <a href="mailto:pintuyadavji05@gmail.com">pintuyadavji05@gmail.com</a></footer>
+</div>
+
+<script>
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+async function loadProjects(){
+  const box = document.getElementById('projects-grid');
+  try{
+    const list = await (await fetch('/api/projects')).json();
+    box.innerHTML = list.length ? list.map(p => `
+      <article class="proj">
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.description)}</p>
+        <div class="tags">${(p.tech||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+        <div class="links">
+          ${p.liveUrl ? `<a href="${esc(p.liveUrl)}" target="_blank" rel="noopener">Live demo</a>` : ''}
+          ${p.repoUrl ? `<a href="${esc(p.repoUrl)}" target="_blank" rel="noopener">Source code</a>` : ''}
+        </div>
+      </article>`).join('') : '<p>No projects yet. Add one with POST /api/projects.</p>';
+  }catch{ box.innerHTML = '<p>Could not load projects. Refresh the page to try again.</p>'; }
+}
+loadProjects();
+
+document.getElementById('contact-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const st = document.getElementById('status');
+  st.textContent = 'Sending…';
+  try{
+    const r = await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(Object.fromEntries(new FormData(e.target)))});
+    const d = await r.json();
+    if(!r.ok) throw new Error(d.error);
+    st.textContent = 'Message sent. I will reply soon.'; e.target.reset();
+  }catch(err){ st.textContent = err.message || 'Could not send. Try again.'; }
+});
+</script>
+</body>
+</html>
